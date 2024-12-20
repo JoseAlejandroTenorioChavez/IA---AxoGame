@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AxoGame - Neural Network Training Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="lib/phaser.min.js"></script>
+    <script src="lib/synaptic.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card game-container">
+            <h1>AxoGame</h1>
+            <div id="game"></div>
+        </div>
+
+        <div class="card info-card">
+            <h2>How to Play</h2>
+            <p>Train an AI to play by demonstrating how to avoid the bouncing sphere!</p>
+            
+            <div class="controls">
+                <div class="control-item">
+                    <span class="key">W</span>
+                    <span>Move Up</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">S</span>
+                    <span>Move Down</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">A</span>
+                    <span>Move Left</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">D</span>
+                    <span>Move Right</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">SPACE</span>
+                    <span>Switch Mode</span>
+                </div>
+            </div>
+
+            <div id="training-progress">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="card stats-card">
+            <div class="stat-item">
+                <h3>Mode</h3>
+                <div id="game-mode">Manual</div>
+            </div>
+            <div class="stat-item">
+                <h3>Training Data</h3>
+                <div id="data-points">0 points</div>
+            </div>
+            <div class="stat-item">
+                <h3>Survival Time</h3>
+                <div id="survival-time">0s</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="notifications"></div>
+
+    <script src="proyecto5try3.js"></script>
+</body>
+</html>

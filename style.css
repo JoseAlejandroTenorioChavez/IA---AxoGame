@@ -1,0 +1,145 @@
+:root {
+    --primary: #ff69b4;
+    --secondary: #4a4e69;
+    --background: #22223b;
+    --card-bg: #2a2a42;
+    --text: #f2e9e4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.game-container {
+    grid-column: span 2;
+    text-align: -webkit-center;
+}
+
+.info-card {
+    grid-column: span 1;
+}
+
+.stats-card {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem;
+}
+
+h1, h2, h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.control-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.key {
+    background: var(--secondary);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-family: monospace;
+}
+
+#training-progress {
+    width: 100%;
+    height: 20px;
+    background: var(--secondary);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.button {
+    background: var(--primary);
+    color: var(--text);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+#notifications {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1000;
+}
+
+.notification {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
