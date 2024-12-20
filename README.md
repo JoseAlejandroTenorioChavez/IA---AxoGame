@@ -44,10 +44,3 @@ AxoGame es una aplicación interactiva que permite a los usuarios entrenar una r
 - **Datos de Entrenamiento**: Muestra la cantidad de puntos de datos de entrenamiento recopilados.
 - **Tiempo de Supervivencia**: Muestra el tiempo que el personaje ha sobrevivido sin colisiones.
 
-## Créditos
-
-Desarrollado por [Tu Nombre] utilizando Phaser y Synaptic.
-
-## Contacto
-
-Para más información o consultas, puedes contactarme en [tuemail@example.com].
